@@ -1,6 +1,7 @@
 import openai
 import os
 import json
+from dotenv import load_dotenv
 
 
 # Load the data
