@@ -41,7 +41,7 @@ def get_article_content(title, data):
 def main():
     st.title("Chat-G-TG")
     st.markdown("""
-        ### Willkommen bei Chat-G-TG!
+        ### Willkommen bei CHAT-GTG!
 
 Diese Anwendung ermöglicht es Ihnen, rechtliche Anfragen im Zusammenhang mit dem Thurgauer Lehrpersonalrecht zu stellen und auf Basis relevanter Gesetzestexte AI-generierte Antworten zu erhalten. Geben Sie Ihre Anfrage in das untenstehende Eingabefeld ein und klicken Sie auf 'Verarbeiten', um Ihre Antwort zu erhalten.
 
