@@ -3,7 +3,8 @@ import os
 import json
 from dotenv import load_dotenv
 import streamlit as st
-
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 # Load the data
