@@ -1,5 +1,7 @@
 import openai
 import os
+import json
+
 
 # Load the data
 with open('article_embeddings.json', 'r') as file:
