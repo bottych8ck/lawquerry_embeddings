@@ -39,7 +39,7 @@ def get_article_content(title, data):
     return ' '.join(paragraphs)
 
 def main():
-    st.title("Chat-G-TG")
+    st.title("Chat-GTG")
     st.markdown("""
         ### Willkommen bei CHAT-GTG!
 
@@ -61,7 +61,7 @@ Diese Anwendung ermöglicht es Ihnen, rechtliche Anfragen im Zusammenhang mit de
         top_articles = sorted_articles[:5]
         combined_articles_text = "\n".join([get_article_content(title, law_data) for title, _ in top_articles])
 
-        prompt = f": {user_input}\\n\\Nachfoglend findest Du fünf Gesetzesartikel. Prüfe ob die Artikel relevant sind und beantworte die Frage basierend auf den relevanten Artikel. Wenn kein Artikel relevant ist, sag, dass kein relevanter Artikel gefunden wurde. Hier die Artikel: :\\n{combined_articles_text}\\n\\ Verzichte auf folgende Hinweise: Dass man einen Anwalt beiziehen sollte. Dass die anderen Artikel nicht relevant sind."
+        prompt = f": {user_input}\\n\\Nachfoglend findest Du fünf Gesetzesartikel. Prüfe ob die Artikel relevant sind und beantworte die Frage basierend auf den relevanten Artikel. Wenn kein einziger Artikel relevant ist, sag, dass kein relevanter Artikel gefunden wurde. Hier die Artikel: :\\n{combined_articles_text}\\n\\ Erwähne nur die relevanten Artikel und verzichte auf den Hinweis, dass man einen Anwalt beiziehen sollte."
         response = client.chat.completions.create(
             model="gpt-4-1106-preview",
             messages=[
