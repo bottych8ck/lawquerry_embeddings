@@ -64,7 +64,7 @@ Diese Anwendung ermöglicht es Ihnen, rechtliche Anfragen im Zusammenhang mit de
         top_articles = sorted_articles[:5]
         combined_articles_text = "\n".join([get_article_content(title, law_data) for title, _ in top_articles])
 
-        prompt = f"Frage: {user_query}\nNachfolgend findest Du fünf Gesetzesartikel. Prüfe ob die Artikel relevant sind und beantworte die Frage basierend auf den relevanten Artikel. Wenn kein einziger Artikel relevant ist, sag, dass kein relevanter Artikel gefunden wurde. Hier die Artikel:\n{combined_articles_text}\nErwähne nur die relevanten Artikel und verzichte auf den Hinweis, dass man einen Anwalt beiziehen sollte."
+        prompt = f"Frage: {user_input}\nNachfolgend findest Du fünf Gesetzesartikel. Prüfe ob die Artikel relevant sind und beantworte die Frage basierend auf den relevanten Artikel. Wenn kein einziger Artikel relevant ist, sag, dass kein relevanter Artikel gefunden wurde. Hier die Artikel:\n{combined_articles_text}\nErwähne nur die relevanten Artikel und verzichte auf den Hinweis, dass man einen Anwalt beiziehen sollte."
         response = client.chat.completions.create(
             model="gpt-4-1106-preview",
             messages=[
